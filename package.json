@@ -1,0 +1,11 @@
+{
+  "name": "medipredict-ai",
+  "private": true,
+  "scripts": {
+    "start-backend": "cd backend && py -m uvicorn main:app --reload --host 127.0.0.1 --port 8000",
+    "start-frontend": "cd frontend && npm run dev",
+    "start-all": "start cmd /k \"npm run start-backend\" & start cmd /k \"npm run start-frontend\"",
+    "dev": "npm run start-all",
+    "install-all": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
+  }
+}
