@@ -20,32 +20,8 @@ const fields = [
   { name: 'mean_area', label: 'Area', placeholder: 'e.g. 1001', hint: 'Mean area of nuclei', group: 'mean', range: '143.5 - 2501' },
   { name: 'mean_smoothness', label: 'Smoothness', placeholder: 'e.g. 0.1184', hint: 'Mean variation in radius lengths', group: 'mean', range: '0.05 - 0.16' },
   { name: 'mean_compactness', label: 'Compactness', placeholder: 'e.g. 0.2776', hint: 'perimeter^2 / area - 1.0', group: 'mean', range: '0.01 - 0.34' },
-  { name: 'mean_concavity', label: 'Concavity', placeholder: 'e.g. 0.3001', hint: 'Severity of concave portions', group: 'mean', range: '0.0 - 0.42' },
-  { name: 'mean_concave_points', label: 'Concave Pts', placeholder: 'e.g. 0.1471', hint: 'Number of concave portions', group: 'mean', range: '0.0 - 0.20' },
-  { name: 'mean_symmetry', label: 'Symmetry', placeholder: 'e.g. 0.2419', hint: 'Nuclei symmetry score', group: 'mean', range: '0.10 - 0.30' },
-  { name: 'mean_fractal_dimension', label: 'Fractal Dim.', placeholder: 'e.g. 0.07871', hint: 'Coastline approximation - 1', group: 'mean', range: '0.04 - 0.09' },
   // SE features
-  { name: 'se_radius', label: 'SE Radius', placeholder: 'e.g. 1.095', hint: 'Standard error of radius', group: 'se', range: '0.11 - 2.87' },
-  { name: 'se_texture', label: 'SE Texture', placeholder: 'e.g. 0.9053', hint: 'SE of texture', group: 'se', range: '0.36 - 4.88' },
-  { name: 'se_perimeter', label: 'SE Perimeter', placeholder: 'e.g. 8.589', hint: 'SE of perimeter', group: 'se', range: '0.75 - 21.9' },
-  { name: 'se_area', label: 'SE Area', placeholder: 'e.g. 153.4', hint: 'SE of area', group: 'se', range: '6.8 - 542.2' },
-  { name: 'se_smoothness', label: 'SE Smoothness', placeholder: 'e.g. 0.006399', hint: 'SE of smoothness', group: 'se', range: '0.001 - 0.03' },
-  { name: 'se_compactness', label: 'SE Compactness', placeholder: 'e.g. 0.04904', hint: 'SE of compactness', group: 'se', range: '0.002 - 0.13' },
-  { name: 'se_concavity', label: 'SE Concavity', placeholder: 'e.g. 0.05373', hint: 'SE of concavity', group: 'se', range: '0.0 - 0.39' },
-  { name: 'se_concave_points', label: 'SE Concave Pts', placeholder: 'e.g. 0.01587', hint: 'SE of concave points', group: 'se', range: '0.0 - 0.05' },
-  { name: 'se_symmetry', label: 'SE Symmetry', placeholder: 'e.g. 0.03003', hint: 'SE of symmetry', group: 'se', range: '0.01 - 0.07' },
-  { name: 'se_fractal_dimension', label: 'SE Fractal Dim.', placeholder: 'e.g. 0.006193', hint: 'SE of fractal dimension', group: 'se', range: '0.001 - 0.02' },
   // Worst features
-  { name: 'worst_radius', label: 'Worst Radius', placeholder: 'e.g. 25.38', hint: 'Worst (largest) radius', group: 'worst', range: '7.9 - 36.0' },
-  { name: 'worst_texture', label: 'Worst Texture', placeholder: 'e.g. 17.33', hint: 'Worst texture', group: 'worst', range: '12.0 - 49.5' },
-  { name: 'worst_perimeter', label: 'Worst Perimeter', placeholder: 'e.g. 184.6', hint: 'Worst perimeter', group: 'worst', range: '50.4 - 251.2' },
-  { name: 'worst_area', label: 'Worst Area', placeholder: 'e.g. 2019', hint: 'Worst area', group: 'worst', range: '185.2 - 4254' },
-  { name: 'worst_smoothness', label: 'Worst Smoothness', placeholder: 'e.g. 0.1622', hint: 'Worst smoothness', group: 'worst', range: '0.07 - 0.22' },
-  { name: 'worst_compactness', label: 'Worst Compactness', placeholder: 'e.g. 0.6656', hint: 'Worst compactness', group: 'worst', range: '0.02 - 1.05' },
-  { name: 'worst_concavity', label: 'Worst Concavity', placeholder: 'e.g. 0.7119', hint: 'Worst concavity', group: 'worst', range: '0.0 - 1.25' },
-  { name: 'worst_concave_points', label: 'Worst Concave', placeholder: 'e.g. 0.2654', hint: 'Worst concave points', group: 'worst', range: '0.0 - 0.29' },
-  { name: 'worst_symmetry', label: 'Worst Symmetry', placeholder: 'e.g. 0.4601', hint: 'Worst symmetry', group: 'worst', range: '0.15 - 0.66' },
-  { name: 'worst_fractal_dimension', label: 'Worst Fractal', placeholder: 'e.g. 0.1189', hint: 'Worst fractal dimension', group: 'worst', range: '0.05 - 0.20' },
 ]
 
 const groupTitles = {
@@ -118,7 +94,7 @@ export default function BreastCancer() {
                 <div className="w-2 h-2 rounded-full bg-gradient-to-r from-red-500 to-pink-500" />
                 {groupTitles[group]}
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {fields.filter(f => f.group === group).map((field) => (
                   <div key={field.name} className="relative group/field">
                     <div className="flex justify-between items-center mb-1">
