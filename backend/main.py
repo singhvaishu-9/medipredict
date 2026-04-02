@@ -103,14 +103,14 @@ def health_check():
 # ══════════════════════════════════════════════════════════════════════════════
 
 class DiabetesInput(BaseModel):
-    Pregnancies: float
-    Glucose: float
-    BloodPressure: float
-    SkinThickness: float
-    Insulin: float
-    BMI: float
-    DiabetesPedigreeFunction: float
-    Age: float
+    Pregnancies: float = 0.0
+    Glucose: float = 0.0
+    BloodPressure: float = 0.0
+    SkinThickness: float = 0.0
+    Insulin: float = 0.0
+    BMI: float = 0.0
+    DiabetesPedigreeFunction: float = 0.0
+    Age: float = 0.0
 
 class TextInput(BaseModel):
     text: str
@@ -118,140 +118,140 @@ class TextInput(BaseModel):
 
 
 class HeartInput(BaseModel):
-    age: float
-    sex: float
-    cp: float
-    trestbps: float
-    chol: float
-    fbs: float
-    restecg: float
-    thalach: float
-    exang: float
-    oldpeak: float
-    slope: float
-    ca: float
-    thal: float
+    age: float = 0.0
+    sex: float = 0.0
+    cp: float = 0.0
+    trestbps: float = 0.0
+    chol: float = 0.0
+    fbs: float = 0.0
+    restecg: float = 0.0
+    thalach: float = 0.0
+    exang: float = 0.0
+    oldpeak: float = 0.0
+    slope: float = 0.0
+    ca: float = 0.0
+    thal: float = 0.0
 
 
 class ParkinsonsInput(BaseModel):
-    fo: float          # MDVP:Fo(Hz)
-    fhi: float         # MDVP:Fhi(Hz)
-    flo: float         # MDVP:Flo(Hz)
-    jitter_pct: float  # MDVP:Jitter(%)
-    jitter_abs: float  # MDVP:Jitter(Abs)
-    rap: float         # MDVP:RAP
-    ppq: float         # MDVP:PPQ
-    ddp: float         # Jitter:DDP
-    shimmer: float     # MDVP:Shimmer
-    shimmer_db: float  # MDVP:Shimmer(dB)
-    apq3: float        # Shimmer:APQ3
-    apq5: float        # Shimmer:APQ5
-    apq: float         # MDVP:APQ
-    dda: float         # Shimmer:DDA
-    nhr: float         # NHR
-    hnr: float         # HNR
-    rpde: float        # RPDE
-    dfa: float         # DFA
-    spread1: float
-    spread2: float
-    d2: float          # D2
-    ppe: float         # PPE
+    fo: float = 0.0          # MDVP:Fo(Hz)
+    fhi: float = 0.0         # MDVP:Fhi(Hz)
+    flo: float = 0.0         # MDVP:Flo(Hz)
+    jitter_pct: float = 0.0  # MDVP:Jitter(%)
+    jitter_abs: float = 0.0  # MDVP:Jitter(Abs)
+    rap: float = 0.0         # MDVP:RAP
+    ppq: float = 0.0         # MDVP:PPQ
+    ddp: float = 0.0         # Jitter:DDP
+    shimmer: float = 0.0     # MDVP:Shimmer
+    shimmer_db: float = 0.0  # MDVP:Shimmer(dB)
+    apq3: float = 0.0        # Shimmer:APQ3
+    apq5: float = 0.0        # Shimmer:APQ5
+    apq: float = 0.0         # MDVP:APQ
+    dda: float = 0.0         # Shimmer:DDA
+    nhr: float = 0.0         # NHR
+    hnr: float = 0.0         # HNR
+    rpde: float = 0.0        # RPDE
+    dfa: float = 0.0         # DFA
+    spread1: float = 0.0
+    spread2: float = 0.0
+    d2: float = 0.0          # D2
+    ppe: float = 0.0         # PPE
 
 
 class BreastCancerInput(BaseModel):
-    mean_radius: float
-    mean_texture: float
-    mean_perimeter: float
-    mean_area: float
-    mean_smoothness: float
-    mean_compactness: float
-    mean_concavity: float
-    mean_concave_points: float
-    mean_symmetry: float
-    mean_fractal_dimension: float
-    se_radius: float
-    se_texture: float
-    se_perimeter: float
-    se_area: float
-    se_smoothness: float
-    se_compactness: float
-    se_concavity: float
-    se_concave_points: float
-    se_symmetry: float
-    se_fractal_dimension: float
-    worst_radius: float
-    worst_texture: float
-    worst_perimeter: float
-    worst_area: float
-    worst_smoothness: float
-    worst_compactness: float
-    worst_concavity: float
-    worst_concave_points: float
-    worst_symmetry: float
-    worst_fractal_dimension: float
+    mean_radius: float = 0.0
+    mean_texture: float = 0.0
+    mean_perimeter: float = 0.0
+    mean_area: float = 0.0
+    mean_smoothness: float = 0.0
+    mean_compactness: float = 0.0
+    mean_concavity: float = 0.0
+    mean_concave_points: float = 0.0
+    mean_symmetry: float = 0.0
+    mean_fractal_dimension: float = 0.0
+    se_radius: float = 0.0
+    se_texture: float = 0.0
+    se_perimeter: float = 0.0
+    se_area: float = 0.0
+    se_smoothness: float = 0.0
+    se_compactness: float = 0.0
+    se_concavity: float = 0.0
+    se_concave_points: float = 0.0
+    se_symmetry: float = 0.0
+    se_fractal_dimension: float = 0.0
+    worst_radius: float = 0.0
+    worst_texture: float = 0.0
+    worst_perimeter: float = 0.0
+    worst_area: float = 0.0
+    worst_smoothness: float = 0.0
+    worst_compactness: float = 0.0
+    worst_concavity: float = 0.0
+    worst_concave_points: float = 0.0
+    worst_symmetry: float = 0.0
+    worst_fractal_dimension: float = 0.0
 
 
 class LiverInput(BaseModel):
-    Age: float
-    Gender: float  # 0 = Female, 1 = Male
-    Total_Bilirubin: float
-    Direct_Bilirubin: float
-    Alkaline_Phosphotase: float
-    Alamine_Aminotransferase: float
-    Aspartate_Aminotransferase: float
-    Total_Proteins: float
-    Albumin: float
-    Albumin_and_Globulin_Ratio: float
+    Age: float = 0.0
+    Gender: float = 0.0  # 0 = Female, 1 = Male
+    Total_Bilirubin: float = 0.0
+    Direct_Bilirubin: float = 0.0
+    Alkaline_Phosphotase: float = 0.0
+    Alamine_Aminotransferase: float = 0.0
+    Aspartate_Aminotransferase: float = 0.0
+    Total_Proteins: float = 0.0
+    Albumin: float = 0.0
+    Albumin_and_Globulin_Ratio: float = 0.0
 
 
 class KidneyInput(BaseModel):
-    age: float
-    bp: float
-    sg: float
-    al: float
-    su: float
-    rbc: float
-    pc: float
-    ba: float
-    bgr: float
-    bu: float
-    sc: float
+    age: float = 0.0
+    bp: float = 0.0
+    sg: float = 0.0
+    al: float = 0.0
+    su: float = 0.0
+    rbc: float = 0.0
+    pc: float = 0.0
+    ba: float = 0.0
+    bgr: float = 0.0
+    bu: float = 0.0
+    sc: float = 0.0
 
 
 class StrokeInput(BaseModel):
-    gender: float
-    age: float
-    hypertension: float
-    heart_disease: float
-    ever_married: float
-    work_type: float
-    residence: float
-    glucose: float
-    bmi: float
-    smoking: float
+    gender: float = 0.0
+    age: float = 0.0
+    hypertension: float = 0.0
+    heart_disease: float = 0.0
+    ever_married: float = 0.0
+    work_type: float = 0.0
+    residence: float = 0.0
+    glucose: float = 0.0
+    bmi: float = 0.0
+    smoking: float = 0.0
 
 
 class PneumoniaInput(BaseModel):
-    age: float
-    fever: float
-    cough: float
-    chest_pain: float
-    resp_rate: float
-    spo2: float
-    wbc: float
-    fatigue: float
-    headache: float
+    age: float = 0.0
+    fever: float = 0.0
+    cough: float = 0.0
+    chest_pain: float = 0.0
+    resp_rate: float = 0.0
+    spo2: float = 0.0
+    wbc: float = 0.0
+    fatigue: float = 0.0
+    headache: float = 0.0
 
 
 class AnemiaInput(BaseModel):
-    gender: float
-    hemoglobin: float
-    mch: float
-    mchc: float
-    mcv: float
-    dizziness: float
-    pale_skin: float
-    fatigue: float
+    gender: float = 0.0
+    hemoglobin: float = 0.0
+    mch: float = 0.0
+    mchc: float = 0.0
+    mcv: float = 0.0
+    dizziness: float = 0.0
+    pale_skin: float = 0.0
+    fatigue: float = 0.0
 
 
 # ══════════════════════════════════════════════════════════════════════════════
