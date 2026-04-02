@@ -18,14 +18,7 @@ const fields = [
   { name: 'cp', label: 'Chest Pain Type', placeholder: '0-3', hint: 'Pain severity (0=Low, 3=Highest)', range: '0 - 3' },
   { name: 'trestbps', label: 'Resting BP', placeholder: 'e.g. 145', hint: 'Systolic blood pressure at rest', range: '90 - 120 mmHg' },
   { name: 'chol', label: 'Cholesterol', placeholder: 'e.g. 233', hint: 'Serum cholesterol (Total)', range: '125 - 200 mg/dL' },
-  { name: 'fbs', label: 'Fasting Blood Sugar', placeholder: '0 or 1', hint: 'Is sugar > 120 mg/dL? (1=Yes, 0=No)', range: '0 or 1' },
-  { name: 'restecg', label: 'Resting ECG', placeholder: '0-2', hint: 'ECG results (0=Normal, 2=Problem)', range: '0 - 2' },
-  { name: 'thalach', label: 'Max Heart Rate', placeholder: 'e.g. 150', hint: 'Maximum rate during stress test', range: '60 - 200 bpm' },
-  { name: 'exang', label: 'Exercise Angina', placeholder: '0 or 1', hint: 'Chest pain during exercise? (1=Y, 0=N)', range: '0 or 1' },
-  { name: 'oldpeak', label: 'ST Depression', placeholder: 'e.g. 2.3', hint: 'Stress test ECG marker', range: '0.0 - 6.2' },
-  { name: 'slope', label: 'ST Segment Slope', placeholder: '0-2', hint: 'ST segment peak slope', range: '0 - 2' },
-  { name: 'ca', label: 'Major Vessels', placeholder: '0-3', hint: 'Number of highlighted vessels', range: '0 - 3' },
-  { name: 'thal', label: 'Thalassemia Status', placeholder: '0-2', hint: 'Blood disorder screening', range: '0 - 2' },
+  { name: 'thalach', label: 'Max Heart Rate', placeholder: 'e.g. 150', hint: 'Maximum rate during stress test', range: '60 - 200 bpm' }
 ]
 
 export default function HeartDisease() {
@@ -47,9 +40,19 @@ export default function HeartDisease() {
     setError(null)
     setResult(null)
     try {
-      const payload = Object.fromEntries(
+      const basePayload = Object.fromEntries(
         Object.entries(formData).map(([k, v]) => [k, parseFloat(v) || 0])
       )
+      const payload = {
+        fbs: 0,
+        restecg: 1,
+        exang: 0,
+        oldpeak: 0,
+        slope: 1,
+        ca: 0,
+        thal: 2,
+        ...basePayload
+      }
       const response = await axios.post(`${API_URL}/predict/heart`, payload)
       setResult(response.data)
     } catch (err) {
@@ -143,8 +146,8 @@ export default function HeartDisease() {
               {[
                 { title: 'Chest Pain (CP)', desc: 'Categorized from 0 to 3. Typical angina (0) or atypical cases help pinpoint vascular blockages.' },
                 { title: 'Cholesterol', desc: 'High serum cholesterol (over 200 mg/dL) can lead to plaque buildup in the coronary arteries.' },
-                { title: 'ST Depression', desc: 'The "Oldpeak" value measuring ECG depression after exercise, indicating heart stress.' },
-                { title: 'Major Vessels', desc: 'Number of major vessels (0-3) colored by fluoroscopy; fewer colored vessels often suggest blockages.' }
+                { title: 'Resting BP', desc: 'Prolonged high blood pressure can damage your heart and coronary arteries.' },
+                { title: 'Max Heart Rate', desc: 'Achieving a healthy maximum heart rate during stress test indicates good cardiovascular fitness.' }
               ].map((item) => (
                 <div key={item.title} className="border-l-4 border-theme-gold pl-4">
                   <h3 className="font-bold text-theme-maroon text-sm uppercase">{item.title}</h3>
@@ -158,7 +161,7 @@ export default function HeartDisease() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-theme-gold/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
             <h2 className="text-xl font-black uppercase mb-6 tracking-tight">Heart Health Metrics</h2>
             <p className="text-white/80 text-sm font-medium leading-relaxed mb-6">
-              This assessment uses the <strong>UCI Cleveland Heart Disease Dataset</strong> parameters. Our model evaluates 13 key biomarkers to calculate your cardiovascular health score.
+              This assessment evaluates key biomarkers to calculate your cardiovascular health score. To keep things simple, we estimate the remaining metrics automatically.  
             </p>
             <div className="p-4 rounded-xl bg-white/10 border border-white/20">
               <h4 className="font-bold text-xs uppercase tracking-widest text-theme-gold mb-2">Did you know?</h4>
