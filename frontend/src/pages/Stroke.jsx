@@ -18,10 +18,6 @@ const fields = [
   { name: 'heart_disease', label: 'Heart Disease', placeholder: '0=No, 1=Yes', hint: 'Cardiac condition history', range: '0 or 1' },
   { name: 'ever_married', label: 'Ever Married', placeholder: '0=No, 1=Yes', hint: 'Marital status', range: '0 or 1' },
   { name: 'work_type', label: 'Work Type', placeholder: '0-3', hint: '0=Private, 1=Self, 2=Govt, 3=None', range: '0 - 3' },
-  { name: 'residence', label: 'Residence', placeholder: '0=Rural, 1=Urban', hint: 'Living environment', range: '0 or 1' },
-  { name: 'glucose', label: 'Avg Glucose', placeholder: 'e.g. 105', hint: 'Average blood sugar', range: '70 - 120 mg/dL' },
-  { name: 'bmi', label: 'BMI', placeholder: 'e.g. 28.1', hint: 'Body Mass Index', range: '18.5 - 24.9' },
-  { name: 'smoking', label: 'Smoking Status', placeholder: '0-3', hint: '0=Former, 1=Never, 2=Active, 3=Unknown', range: '0 - 3' },
 ]
 
 export default function Stroke() {

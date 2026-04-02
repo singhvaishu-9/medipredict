@@ -19,8 +19,6 @@ const fields = [
   { name: 'SkinThickness', label: 'Skin Thickness', placeholder: 'e.g. 35', type: 'number', hint: 'Triceps fold (mm)', range: '10 - 50 mm' },
   { name: 'Insulin', label: 'Insulin Level', placeholder: 'e.g. 0', type: 'number', hint: '2-Hour serum insulin', range: '15 - 276 μU/mL' },
   { name: 'BMI', label: 'BMI', placeholder: 'e.g. 33.6', type: 'number', hint: 'Body Mass Index', range: '18.5 - 25' },
-  { name: 'DiabetesPedigreeFunction', label: 'Hereditary Score', placeholder: 'e.g. 0.627', type: 'number', hint: 'Genetic risk factor', range: '0.08 - 2.42' },
-  { name: 'Age', label: 'Age', placeholder: 'e.g. 50', type: 'number', hint: 'Age in years', range: '1 - 100' },
 ]
 
 export default function Diabetes() {

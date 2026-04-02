@@ -19,10 +19,6 @@ const fields = [
   { name: 'Direct_Bilirubin', label: 'Direct Bilirubin', placeholder: 'e.g. 0.1', hint: 'Conjugated bilirubin', range: '0 - 0.3 mg/dL' },
   { name: 'Alkaline_Phosphotase', label: 'Alkaline Phos.', placeholder: 'e.g. 187', hint: 'Liver/Bone enzyme', range: '44 - 147 IU/L' },
   { name: 'Alamine_Aminotransferase', label: 'ALT Enzyme', placeholder: 'e.g. 16', hint: 'Main liver damage marker', range: '7 - 55 IU/L' },
-  { name: 'Aspartate_Aminotransferase', label: 'AST Enzyme', placeholder: 'e.g. 18', hint: 'Muscle/Liver enzyme', range: '8 - 48 IU/L' },
-  { name: 'Total_Proteins', label: 'Total Proteins', placeholder: 'e.g. 6.8', hint: 'Combined blood proteins', range: '6.0 - 8.3 g/dL' },
-  { name: 'Albumin', label: 'Albumin', placeholder: 'e.g. 3.3', hint: 'Main liver-made protein', range: '3.4 - 5.4 g/dL' },
-  { name: 'Albumin_and_Globulin_Ratio', label: 'A/G Ratio', placeholder: 'e.g. 0.90', hint: 'Protein balance ratio', range: '1.1 - 2.5' },
 ]
 
 export default function Liver() {

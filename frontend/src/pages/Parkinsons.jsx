@@ -19,22 +19,6 @@ const fields = [
   { name: 'jitter_pct', label: 'MDVP:Jitter (%)', placeholder: 'e.g. 0.00784', hint: 'Freq. variation %', range: '< 1.04%' },
   { name: 'jitter_abs', label: 'MDVP:Jitter (Abs)', placeholder: 'e.g. 0.00007', hint: 'Absolute jitter (μs)', range: '< 0.00003s' },
   { name: 'rap', label: 'MDVP:RAP', placeholder: 'e.g. 0.00370', hint: 'Relative amp. perturbation', range: '< 0.0068' },
-  { name: 'ppq', label: 'MDVP:PPQ', placeholder: 'e.g. 0.00554', hint: '5-point period perturb.', range: '< 0.0065' },
-  { name: 'ddp', label: 'Jitter:DDP', placeholder: 'e.g. 0.01109', hint: 'Avg. absolute diff.', range: '< 0.02' },
-  { name: 'shimmer', label: 'MDVP:Shimmer', placeholder: 'e.g. 0.04374', hint: 'Amp. variation', range: '< 0.038' },
-  { name: 'shimmer_db', label: 'MDVP:Shimmer (dB)', placeholder: 'e.g. 0.426', hint: 'Shimmer in decibels', range: '< 0.35 dB' },
-  { name: 'apq3', label: 'Shimmer:APQ3', placeholder: 'e.g. 0.02182', hint: '3-point amp. perturb.', range: '< 0.02' },
-  { name: 'apq5', label: 'Shimmer:APQ5', placeholder: 'e.g. 0.03130', hint: '5-point amp. perturb.', range: '< 0.025' },
-  { name: 'apq', label: 'MDVP:APQ', placeholder: 'e.g. 0.02971', hint: '11-point amp. perturb.', range: '< 0.03' },
-  { name: 'dda', label: 'Shimmer:DDA', placeholder: 'e.g. 0.06545', hint: 'Avg. abs. diff.', range: '< 0.06' },
-  { name: 'nhr', label: 'NHR', placeholder: 'e.g. 0.02211', hint: 'Noise-to-harmonics ratio', range: '< 0.1' },
-  { name: 'hnr', label: 'HNR', placeholder: 'e.g. 21.033', hint: 'Harmonics-to-noise ratio', range: '> 20 dB' },
-  { name: 'rpde', label: 'RPDE', placeholder: 'e.g. 0.414783', hint: 'Period density entropy', range: '0.4 - 0.7' },
-  { name: 'dfa', label: 'DFA', placeholder: 'e.g. 0.815285', hint: 'Fluctuation analysis', range: '0.5 - 0.9' },
-  { name: 'spread1', label: 'Spread1', placeholder: 'e.g. -4.813031', hint: 'Nonlinear freq. spread', range: '-7.9 to -2.4' },
-  { name: 'spread2', label: 'Spread2', placeholder: 'e.g. 0.266482', hint: 'Freq. variation spread', range: '0.0 - 0.4' },
-  { name: 'd2', label: 'D2', placeholder: 'e.g. 2.301442', hint: 'Correlation dimension', range: '1.4 - 3.6' },
-  { name: 'ppe', label: 'PPE', placeholder: 'e.g. 0.284654', hint: 'Pitch period entropy', range: '0.0 - 0.4' },
 ]
 
 export default function Parkinsons() {
@@ -95,7 +79,7 @@ export default function Parkinsons() {
       {/* Form */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fade-in">
         <form onSubmit={handleSubmit} className="form-card" id="parkinsons-form">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {fields.map((field) => (
               <div key={field.name} className="relative group/field">
                 <div className="flex justify-between items-center mb-1">

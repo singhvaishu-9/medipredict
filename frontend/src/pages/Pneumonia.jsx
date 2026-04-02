@@ -18,9 +18,6 @@ const fields = [
   { name: 'chest_pain', label: 'Chest Pain', placeholder: '0=No, 1=Yes', hint: 'Pain during breathing', range: '0 or 1' },
   { name: 'resp_rate', label: 'Resp. Rate', placeholder: 'e.g. 24', hint: 'Breaths per minute', range: '12 - 20 bpm' },
   { name: 'spo2', label: 'SpO2 Level', placeholder: 'e.g. 94', hint: 'Blood oxygen saturation', range: '95 - 100%' },
-  { name: 'wbc', label: 'WBC Count', placeholder: 'e.g. 11000', hint: 'White blood cells /µL', range: '4500 - 11000' },
-  { name: 'fatigue', label: 'Fatigue', placeholder: '0=No, 1=Yes', hint: 'Severe exhaustion status', range: '0 or 1' },
-  { name: 'headache', label: 'Headache', placeholder: '0=No, 1=Yes', hint: 'Persistent head pain', range: '0 or 1' },
 ]
 
 export default function Pneumonia() {

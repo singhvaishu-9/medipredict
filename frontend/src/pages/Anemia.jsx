@@ -18,8 +18,6 @@ const fields = [
   { name: 'mchc', label: 'MCHC', placeholder: 'e.g. 33', hint: 'Hb concentration', range: '32 - 36 g/dL' },
   { name: 'mcv', label: 'MCV', placeholder: 'e.g. 88', hint: 'Average RBC volume', range: '80 - 100 fL' },
   { name: 'dizziness', label: 'Dizziness', placeholder: '0=No, 1=Yes', hint: 'Lightheadedness status', range: '0 or 1' },
-  { name: 'pale_skin', label: 'Pale Skin', placeholder: '0=No, 1=Yes', hint: 'Skin color change', range: '0 or 1' },
-  { name: 'fatigue', label: 'Fatigue', placeholder: '0=No, 1=Yes', hint: 'Frequent tiredness', range: '0 or 1' },
 ]
 
 export default function Anemia() {

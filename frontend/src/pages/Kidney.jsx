@@ -18,11 +18,6 @@ const fields = [
   { name: 'al', label: 'Albumin', placeholder: '0-5', hint: 'Protein in urine (0=None)', range: '0 - 5' },
   { name: 'su', label: 'Sugar', placeholder: '0-5', hint: 'Sugar in urine (0=None)', range: '0 - 5' },
   { name: 'rbc', label: 'Red Blood Cells', placeholder: '0=Abnormal, 1=Normal', hint: 'Presence of RBCs', range: '0 or 1' },
-  { name: 'pc', label: 'Pus Cell', placeholder: '0=Abnormal, 1=Normal', hint: 'Presence of pus cells', range: '0 or 1' },
-  { name: 'ba', label: 'Bacteria', placeholder: '0=Not Present, 1=Present', hint: 'Urine bacteria status', range: '0 or 1' },
-  { name: 'bgr', label: 'Blood Glucose Rand', placeholder: 'e.g. 121', hint: 'Random blood sugar', range: '70 - 140 mg/dL' },
-  { name: 'bu', label: 'Blood Urea', placeholder: 'e.g. 36', hint: 'Waste nitrogen in blood', range: '7 - 20 mg/dL' },
-  { name: 'sc', label: 'Serum Creatinine', placeholder: 'e.g. 1.2', hint: 'Muscle waste filter rate', range: '0.6 - 1.3 mg/dL' },
 ]
 
 export default function Kidney() {
